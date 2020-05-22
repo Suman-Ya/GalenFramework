@@ -1,0 +1,64 @@
+{
+  "testId" : "1-home-page.gspec",
+  "name" : "home-page.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  home-page.gspec --url http://testapp.galenframework.com/ --size 1024x768 --htmlreport reports",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: home-page.gspec included tags: ",
+          "status" : "info",
+          "time" : 1589365143396,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "home-page.gspec",
+              "lineNumber" : 5
+            },
+            "objects" : [ {
+              "name" : "header-logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 7
+                },
+                "name" : "left-of header-text 22 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header-logo",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "header-text",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "22px",
+                  "realDistance" : "22px"
+                } ],
+                "highlight" : [ "header-logo", "header-text" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "header-text" : {
+              "area" : [ 117, 20, 609, 39 ]
+            },
+            "header-logo" : {
+              "area" : [ 47, 13, 48, 48 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1589365142082,
+        "type" : "node"
+      } ],
+      "time" : 1589365130816,
+      "type" : "node"
+    } ]
+  }
+}

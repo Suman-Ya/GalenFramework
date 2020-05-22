@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "Colt_logout.gspec",
+    "startedAt" : 1590136025166,
+    "endedAt" : 1590136039975,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 5,
+      "errors" : 2,
+      "warnings" : 0,
+      "total" : 7
+    },
+    "testId" : "1-colt-logout.gspec",
+    "duration" : 14809,
+    "failed" : true
+  } ]
+}

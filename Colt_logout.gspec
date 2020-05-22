@@ -1,0 +1,22 @@
+@objects
+    thankyou_txt xpath //p[contains(@class,'centered text-white')]
+    clock_icon xpath //img[@class='colt-clock']
+    session_txt xpath //p[@class='forgot-password']
+    loginbck_btn xpath //button[@class='btn btn-secondary btn-block btn-lg']
+    tracktickets_btn xpath //button[@class='btn btn-primary']
+    Banner_img xpath //div[@class='row banner-outline d-none d-sm-block']
+    Globe_icon xpath //i[contains(@class,'fa fa-globe')]
+
+= Verification on logout page =
+    thankyou_txt:
+        inside Banner_img 0 to 15px top left
+    clock_icon:
+        above session_txt 10 to 20px
+        height 100px
+    session_txt:
+        text contains "Your session has been terminated and will automatically redirected to"
+    loginbck_btn:
+        below session_txt 10 to 20px
+        height 10 to 100px
+    tracktickets_btn:
+        near Globe_icon -360 to 40px right

@@ -1,0 +1,67 @@
+@objects
+    header xpath //div[contains(@class,'col-2 colt-header')]
+        logo xpath //div[@class='col-2 colt-header']//img
+
+    header_2 xpath //div[contains(@class,'localization')]    
+        TrackTickets_btn xpath //button[contains(@class,'btn btn-colt')]
+        Globe_icon xpath //i[contains(@class,'fa fa-globe')]
+    
+    Banner_img xpath //div[@class='row banner-outline d-none d-sm-block']
+    Banner_text_img xpath //p[contains(@class,'centered text-white')]
+
+    Foot_menu xpath //ul[@class='footer-menu']
+        copyright_txt xpath //li[@class='copy-right']
+        codeofBusiness_link xpath //a[contains(text(),'Colt Code of Business Conduct')]
+        GrpofCos_link xpath //a[contains(text(),'Colt Group of Companies')]
+        DataPrivacyStatement_link xpath //a[contains(text(),'Data Privacy Statement')]
+        TermsofUse_link xpath //a[contains(text(),'Terms of Use')]
+        HelpnSupport_link xpath //a[contains(text(),'Help and Support')]
+
+@set
+    commonHeaderMargin 100 to 300px 
+    contentMargin ~20px
+
+= Page Header =
+    header:
+        height ~70px
+
+        @on desktop
+            centered horizontally inside screen
+        
+        @on mobile
+            inside screen 0px left right
+    header.logo:
+            inside header 64px left, 0 to 20px top bottom
+            width 90 to 120 px
+            height 10 to 50 px
+    header_2.TrackTickets_btn:
+            inside header_2 ~74px right, 0 to 100px top bottom
+            width 10 to 150 px
+            height 10 to 100 px
+            text is "Track Tickets"
+
+= Right header Buttons Verification =
+    header_2.TrackTickets_btn:
+        aligned horizontally top header.logo
+    header_2.Globe_icon:
+        near header_2.TrackTickets_btn -360 to 40px right
+    
+= Banner Verification =
+    Banner_img:
+        below  header < 10px
+    Banner_text_img:
+        inside Banner_img 0 to 15px top left
+
+= Foot Verification =
+    Foot_menu.copyright_txt:
+        text contains "Copyright 2020"
+    Foot_menu.codeofBusiness_link:
+        near Foot_menu.GrpofCos_link -203 to 20px left
+    Foot_menu.GrpofCos_link:
+        near Foot_menu.DataPrivacyStatement_link -360 to 10px right
+    Foot_menu.DataPrivacyStatement_link:
+        near Foot_menu.TermsofUse_link -360 to 10px right
+    Foot_menu.TermsofUse_link:
+        near Foot_menu.HelpnSupport_link -360 to 10px right
+    Foot_menu.HelpnSupport_link:
+        near Foot_menu.TermsofUse_link -360 to 10px left
