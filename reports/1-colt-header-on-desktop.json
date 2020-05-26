@@ -1,0 +1,452 @@
+{
+  "testId" : "1-colt-header-on-desktop",
+  "name" : "Colt_header on desktop",
+  "report" : {
+    "nodes" : [ {
+      "name" : "http://rfsag.colt.net/AGLogout  1920x1080",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check Colt_header.gspec --include desktop",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_header.gspec included tags: desktop",
+          "status" : "error",
+          "time" : 1590487890111,
+          "includedTags" : [ "desktop" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Page Header",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside screen 0 to 1920px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "1056px"
+                } ],
+                "highlight" : [ "header", "screen" ]
+              } ]
+            }, {
+              "name" : "header.logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "inside header 64px left, 0 to 20px top bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "64px",
+                  "realDistance" : "64px"
+                }, {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 20px",
+                  "realDistance" : "16px"
+                }, {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "header.logo", "header" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "width 115 px",
+                "errors" : [ "\"header.logo\" width is 102px instead of 115px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "115px",
+                  "realDistance" : "102px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "height 45.29 px",
+                "errors" : [ "\"header.logo\" height is 40.00px instead of 45.29px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "45.29px",
+                  "realDistance" : "40.00px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "color-scheme 0% #20c997, < 90% #212529",
+                "highlight" : [ "header.logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Right header Buttons Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 34
+            },
+            "objects" : [ {
+              "name" : "header_2.Globe_icon",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "height 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" height is 24px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "24px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "width 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" width is 21px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "21px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Banner Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 39
+            },
+            "objects" : [ {
+              "name" : "Banner_img",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "below  header < 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Banner_img",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "< 10px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "Banner_img", "header" ]
+              } ]
+            }, {
+              "name" : "Banner_text_img",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Banner_text_img",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "Banner_text_img",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "Banner_text_img", "Banner_img" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Foot Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "Foot_menu.copyright_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "text contains \"Copyright 2020\"",
+                "highlight" : [ "Foot_menu.copyright_txt" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.codeofBusiness_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "near Foot_menu.GrpofCos_link -203 to 40px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-203 to 40px",
+                  "realDistance" : "37px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.GrpofCos_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.GrpofCos_link",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "near Foot_menu.DataPrivacyStatement_link -390 px right",
+                "errors" : [ "\"Foot_menu.GrpofCos_link\" is -323px right instead of -390px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-390px",
+                  "realDistance" : "-323px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.DataPrivacyStatement_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.DataPrivacyStatement_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-253px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.TermsofUse_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "near Foot_menu.HelpnSupport_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-219px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.HelpnSupport_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.HelpnSupport_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 57
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-219px"
+                } ],
+                "highlight" : [ "Foot_menu.HelpnSupport_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "Foot_menu.TermsofUse_link" : {
+              "area" : [ 1015, 582, 79, 25 ]
+            },
+            "header.logo" : {
+              "area" : [ 64, 19, 102, 40 ]
+            },
+            "Foot_menu.HelpnSupport_link" : {
+              "area" : [ 1131, 582, 103, 25 ]
+            },
+            "Foot_menu.DataPrivacyStatement_link" : {
+              "area" : [ 841, 582, 136, 25 ]
+            },
+            "Banner_text_img" : {
+              "area" : [ 15, 75, 1237, 152 ]
+            },
+            "Banner_img" : {
+              "area" : [ 0, 75, 1267, 192 ]
+            },
+            "Foot_menu.GrpofCos_link" : {
+              "area" : [ 654, 582, 149, 25 ]
+            },
+            "header" : {
+              "area" : [ 0, 3, 211, 72 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 1267, 652 ]
+            },
+            "Foot_menu.copyright_txt" : {
+              "area" : [ 31, 587, 133, 40 ]
+            },
+            "Foot_menu.codeofBusiness_link" : {
+              "area" : [ 436, 582, 181, 25 ]
+            },
+            "header_2.Globe_icon" : {
+              "area" : [ 1219, 24, 21, 24 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590487883203,
+        "type" : "node"
+      } ],
+      "time" : 1590487877232,
+      "type" : "node"
+    } ]
+  }
+}

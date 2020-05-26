@@ -18,5 +18,3 @@
     loginbck_btn:
         below session_txt 10 to 20px
         height 10 to 100px
-    tracktickets_btn:
-        near Globe_icon -360 to 40px right

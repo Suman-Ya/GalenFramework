@@ -1,17 +1,45 @@
 {
   "tests" : [ {
-    "name" : "Colt_logout.gspec",
-    "startedAt" : 1590136025166,
-    "endedAt" : 1590136039975,
+    "name" : "Colt_header on desktop",
+    "startedAt" : 1590487877229,
+    "endedAt" : 1590487891072,
     "failed" : true,
     "statistic" : {
-      "passed" : 5,
-      "errors" : 2,
+      "passed" : 10,
+      "errors" : 5,
       "warnings" : 0,
-      "total" : 7
+      "total" : 15
     },
-    "testId" : "1-colt-logout.gspec",
-    "duration" : 14809,
+    "testId" : "1-colt-header-on-desktop",
+    "duration" : 13843,
     "failed" : true
+  }, {
+    "name" : "Colt_logout on desktop",
+    "startedAt" : 1590487891073,
+    "endedAt" : 1590487900908,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 6,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 6
+    },
+    "testId" : "2-colt-logout-on-desktop",
+    "duration" : 9835,
+    "failed" : false
+  }, {
+    "name" : "Colt_login on desktop",
+    "startedAt" : 1590487900908,
+    "endedAt" : 1590487909635,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 15,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 15
+    },
+    "testId" : "3-colt-login-on-desktop",
+    "duration" : 8727,
+    "failed" : false
   } ]
 }

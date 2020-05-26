@@ -1,0 +1,11 @@
+Colt_header on desktop
+    http://rfsag.colt.net/AGLogout  1920x1080
+        check Colt_header.gspec --include desktop
+
+Colt_logout on desktop
+    http://rfsag.colt.net/AGLogout  1920x1080
+        check Colt_logout.gspec --include desktop
+
+Colt_login on desktop
+    https://rfsidm.colt.net/nidp/app/login?  1920x1080
+        check Colt_login.gspec --include desktop

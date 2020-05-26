@@ -3,7 +3,7 @@
         logo xpath //div[@class='col-2 colt-header']//img
 
     header_2 xpath //div[contains(@class,'localization')]    
-        TrackTickets_btn xpath //button[contains(@class,'btn btn-colt')]
+        TrackTickets_btn xpath //button[contains(text(),'Track Tickets')][1]
         Globe_icon xpath //i[contains(@class,'fa fa-globe')]
     
     Banner_img xpath //div[@class='row banner-outline d-none d-sm-block']
@@ -18,34 +18,24 @@
         HelpnSupport_link xpath //a[contains(text(),'Help and Support')]
 
 @set
-    commonHeaderMargin 100 to 300px 
+    commonHeaderMargin 0 to 1920px 
     contentMargin ~20px
 
 = Page Header =
     header:
-        height ~70px
+        inside screen ${commonHeaderMargin} left right
 
-        @on desktop
-            centered horizontally inside screen
-        
-        @on mobile
-            inside screen 0px left right
     header.logo:
             inside header 64px left, 0 to 20px top bottom
-            width 90 to 120 px
-            height 10 to 50 px
-    header_2.TrackTickets_btn:
-            inside header_2 ~74px right, 0 to 100px top bottom
-            width 10 to 150 px
-            height 10 to 100 px
-            text is "Track Tickets"
+            width 115 px
+            height 45.29 px
+            color-scheme 0% #20c997, < 90% #212529
 
 = Right header Buttons Verification =
-    header_2.TrackTickets_btn:
-        aligned horizontally top header.logo
     header_2.Globe_icon:
-        near header_2.TrackTickets_btn -360 to 40px right
-    
+        height 36 px
+        width 36 px
+
 = Banner Verification =
     Banner_img:
         below  header < 10px
@@ -56,9 +46,9 @@
     Foot_menu.copyright_txt:
         text contains "Copyright 2020"
     Foot_menu.codeofBusiness_link:
-        near Foot_menu.GrpofCos_link -203 to 20px left
+        near Foot_menu.GrpofCos_link -203 to 40px left
     Foot_menu.GrpofCos_link:
-        near Foot_menu.DataPrivacyStatement_link -360 to 10px right
+        near Foot_menu.DataPrivacyStatement_link -310 to -390 px right
     Foot_menu.DataPrivacyStatement_link:
         near Foot_menu.TermsofUse_link -360 to 10px right
     Foot_menu.TermsofUse_link:
