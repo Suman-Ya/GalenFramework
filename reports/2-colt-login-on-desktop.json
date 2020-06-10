@@ -1,17 +1,22 @@
 {
   "testId" : "2-colt-login-on-desktop",
-  "name" : "Colt_login on desktop",
+  "name" : "Colt_login on Desktop",
   "report" : {
     "nodes" : [ {
       "name" : "https://rfsidm.colt.net/nidp/app/login?  1920x1080",
       "status" : "info",
       "nodes" : [ {
+        "name" : "wait 30s",
+        "status" : "info",
+        "time" : 1590505657399,
+        "type" : "node"
+      }, {
         "name" : "check Colt_login.gspec --include desktop",
         "status" : "info",
         "nodes" : [ {
           "name" : "Check layout: Colt_login.gspec included tags: desktop",
           "status" : "info",
-          "time" : 1590484328928,
+          "time" : 1590505689940,
           "includedTags" : [ "desktop" ],
           "excludedTags" : [ ],
           "sections" : [ {
@@ -393,7 +398,7 @@
               "area" : [ 377, 523, 511, 46 ]
             },
             "forgot-password" : {
-              "area" : [ 377, 487, 137, 17 ]
+              "area" : [ 377, 485, 171, 19 ]
             },
             "username" : {
               "area" : [ 377, 343, 511, 46 ]
@@ -402,10 +407,10 @@
           "screenshot" : "layout-2-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1590484327229,
+        "time" : 1590505687400,
         "type" : "node"
       } ],
-      "time" : 1590484321856,
+      "time" : 1590505651780,
       "type" : "node"
     } ]
   }

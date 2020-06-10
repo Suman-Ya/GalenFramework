@@ -9,195 +9,317 @@
         <script type="text/javascript">
 var REPORT_DATA = {
   "testId" : "1-colt-logout-on-desktop",
-  "name" : "Colt_logout on desktop",
+  "name" : "Colt_logout on Desktop",
   "report" : {
     "nodes" : [ {
-      "name" : "http://rfsag.colt.net/AGLogout  1920x1080",
+      "name" : "https://rfsidm.colt.net/nidp/app/login? 1920x1080",
       "status" : "info",
       "nodes" : [ {
-        "name" : "check Colt_logout.gspec --include desktop",
+        "name" : "wait 30s",
+        "status" : "info",
+        "time" : 1591781133481,
+        "type" : "node"
+      }, {
+        "name" : "properties common.properties",
+        "status" : "info",
+        "time" : 1591781163483,
+        "type" : "node"
+      }, {
+        "name" : "properties TestData.properties",
+        "status" : "info",
+        "time" : 1591781163485,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_login.gspec --include desktop",
         "status" : "info",
         "nodes" : [ {
-          "name" : "Check layout: Colt_logout.gspec included tags: desktop",
-          "status" : "error",
-          "time" : 1590484320947,
+          "name" : "Check layout: Colt_login.gspec included tags: desktop",
+          "status" : "info",
+          "time" : 1591781166359,
           "includedTags" : [ "desktop" ],
           "excludedTags" : [ ],
           "sections" : [ {
-            "name" : "Verification on logout page",
+            "name" : "Login Module",
             "place" : {
-              "filePath" : "Colt_logout.gspec",
-              "lineNumber" : 10
+              "filePath" : "Colt_login.gspec",
+              "lineNumber" : 29
             },
             "objects" : [ {
-              "name" : "thankyou_txt",
+              "name" : "username",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 12
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 31
                 },
-                "name" : "inside Banner_img 0 to 15px top left",
+                "name" : "left-of username_Img_icon ~-21 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "thankyou_txt",
-                    "edge" : "top"
+                    "object" : "username",
+                    "edge" : "right"
                   },
                   "to" : {
-                    "object" : "Banner_img",
-                    "edge" : "top"
-                  },
-                  "expectedDistance" : "0 to 15px",
-                  "realDistance" : "0px"
-                }, {
-                  "from" : {
-                    "object" : "thankyou_txt",
+                    "object" : "username_Img_icon",
                     "edge" : "left"
                   },
-                  "to" : {
-                    "object" : "Banner_img",
-                    "edge" : "left"
-                  },
-                  "expectedDistance" : "0 to 15px",
-                  "realDistance" : "15px"
+                  "expectedDistance" : "-23 to -19px",
+                  "realDistance" : "-21px"
                 } ],
-                "highlight" : [ "thankyou_txt", "Banner_img" ]
-              } ]
-            }, {
-              "name" : "clock_icon",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 14
-                },
-                "name" : "above session_txt 10 to 20px",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "clock_icon",
-                    "edge" : "bottom"
-                  },
-                  "to" : {
-                    "object" : "session_txt",
-                    "edge" : "top"
-                  },
-                  "expectedDistance" : "10 to 20px",
-                  "realDistance" : "16px"
-                } ],
-                "highlight" : [ "clock_icon", "session_txt" ]
+                "highlight" : [ "username", "username_Img_icon" ]
               }, {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 15
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 32
                 },
-                "name" : "height 100px",
+                "name" : "above password ~24 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "clock_icon",
-                    "edge" : "top"
-                  },
-                  "to" : {
-                    "object" : "clock_icon",
+                    "object" : "username",
                     "edge" : "bottom"
                   },
-                  "expectedDistance" : "100px",
-                  "realDistance" : "100px"
+                  "to" : {
+                    "object" : "password",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "22 to 26px",
+                  "realDistance" : "24px"
                 } ],
-                "highlight" : [ "clock_icon" ]
+                "highlight" : [ "username", "password" ]
               } ]
             }, {
-              "name" : "session_txt",
+              "name" : "password",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 17
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 35
                 },
-                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
-                "highlight" : [ "session_txt" ]
-              } ]
-            }, {
-              "name" : "loginbck_btn",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 19
-                },
-                "name" : "below session_txt 10 to 20px",
+                "name" : "left-of forgot_password ~-510 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "loginbck_btn",
-                    "edge" : "top"
+                    "object" : "password",
+                    "edge" : "right"
                   },
                   "to" : {
-                    "object" : "session_txt",
-                    "edge" : "bottom"
+                    "object" : "forgot_password",
+                    "edge" : "left"
                   },
-                  "expectedDistance" : "10 to 20px",
-                  "realDistance" : "16px"
+                  "expectedDistance" : "-512 to -508px",
+                  "realDistance" : "-511px"
                 } ],
-                "highlight" : [ "loginbck_btn", "session_txt" ]
+                "highlight" : [ "password", "forgot_password" ]
               }, {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 20
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 36
                 },
-                "name" : "height 10 to 100px",
+                "name" : "below username ~24 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "loginbck_btn",
+                    "object" : "password",
                     "edge" : "top"
                   },
                   "to" : {
-                    "object" : "loginbck_btn",
+                    "object" : "username",
                     "edge" : "bottom"
                   },
-                  "expectedDistance" : "10 to 100px",
-                  "realDistance" : "52px"
+                  "expectedDistance" : "22 to 26px",
+                  "realDistance" : "24px"
                 } ],
-                "highlight" : [ "loginbck_btn" ]
+                "highlight" : [ "password", "username" ]
               } ]
             }, {
-              "name" : "tracktickets_btn",
+              "name" : "username_Img_icon",
               "specs" : [ {
-                "status" : "error",
+                "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 22
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 42
                 },
-                "name" : "near Globe_icon -360 to 40px right",
-                "errors" : [ "\"tracktickets_btn\" is absent on page" ],
-                "highlight" : [ ]
+                "name" : "height ~16px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "username_Img_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "username_Img_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "username_Img_icon" ]
+              } ]
+            }, {
+              "name" : "eyeIcon_password",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "height ~16px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "eyeIcon_password" ]
+              } ]
+            }, {
+              "name" : "login_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "below forgot_password  09 to 20 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "forgot_password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "9 to 20px",
+                  "realDistance" : "19px"
+                } ],
+                "highlight" : [ "login_btn", "forgot_password" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Verification of page elements when country changes",
+            "place" : {
+              "filePath" : "Colt_login.gspec",
+              "lineNumber" : 50
+            },
+            "objects" : [ {
+              "name" : "login_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "text is \"Login\"",
+                "highlight" : [ "login_btn" ]
+              } ]
+            }, {
+              "name" : "register_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 63
+                },
+                "name" : "text is \"Register\"",
+                "highlight" : [ "register_btn" ]
+              } ]
+            }, {
+              "name" : "login_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 71
+                },
+                "name" : "text is \"By logging in you agree to the Terms Of Use and to our Privacy and Cookie Policy. You may select to change your browser setting and restrict cookies.\"",
+                "highlight" : [ "login_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 72
+                },
+                "name" : "below register_btn 01 to 20 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_txt",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "register_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "1 to 20px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "login_txt", "register_btn" ]
+              } ]
+            }, {
+              "name" : "EN_welcome_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 79
+                },
+                "name" : "text is \"Welcome to Colt Online\"",
+                "highlight" : [ "EN_welcome_txt" ]
               } ]
             } ]
           } ],
           "objects" : {
-            "loginbck_btn" : {
-              "area" : [ 425, 504, 415, 52 ]
+            "login_txt" : {
+              "area" : [ 377, 644, 511, 62 ]
             },
-            "Banner_img" : {
-              "area" : [ 0, 75, 1267, 192 ]
+            "password" : {
+              "area" : [ 377, 413, 511, 46 ]
             },
-            "clock_icon" : {
-              "area" : [ 583, 296, 100, 100 ]
+            "EN_welcome_txt" : {
+              "area" : [ 15, 72, 1237, 152 ]
             },
-            "session_txt" : {
-              "area" : [ 425, 412, 415, 76 ]
+            "eyeIcon_password" : {
+              "area" : [ 862, 429, 16, 16 ]
             },
-            "thankyou_txt" : {
-              "area" : [ 15, 75, 1237, 152 ]
+            "register_btn" : {
+              "area" : [ 377, 593, 511, 46 ]
+            },
+            "username_Img_icon" : {
+              "area" : [ 867, 359, 11, 16 ]
+            },
+            "login_btn" : {
+              "area" : [ 377, 523, 511, 46 ]
+            },
+            "username" : {
+              "area" : [ 377, 343, 511, 46 ]
+            },
+            "forgot_password" : {
+              "area" : [ 377, 485, 171, 19 ]
             }
           },
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1590484312535,
+        "time" : 1591781163486,
+        "type" : "node"
+      }, {
+        "name" : "run LoginTest.js '{login: \"ColtAdmin\", password: \"Colt@1234\"}'",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "WrappedException: Wrapped org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#colUserImagePreview\"}\n  (Session info: chrome=83.0.4103.97)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: 'unknown', revision: 'unknown', time: 'unknown'\nSystem info: host: 'LIN20001635', ip: '192.168.43.247', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\\Users\\syadav26\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:59157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e445709f5e4394896515810672a44aab\n*** Element info: {Using=css selector, value=#colUserImagePreview} (LoginTest.js#13)",
+          "status" : "error",
+          "time" : 1591781166744,
+          "stacktrace" : "org.mozilla.javascript.WrappedException: Wrapped org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#colUserImagePreview\"}\n  (Session info: chrome=83.0.4103.97)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: 'unknown', revision: 'unknown', time: 'unknown'\nSystem info: host: 'LIN20001635', ip: '192.168.43.247', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\\Users\\syadav26\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:59157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e445709f5e4394896515810672a44aab\n*** Element info: {Using=css selector, value=#colUserImagePreview} (LoginTest.js#13)\r\n\tat org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1914)\r\n\tat org.mozilla.javascript.MemberBox.invoke(MemberBox.java:148)\r\n\tat org.mozilla.javascript.NativeJavaMethod.call(NativeJavaMethod.java:225)\r\n\tat org.mozilla.javascript.optimizer.OptRuntime.call1(OptRuntime.java:32)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63._c_pageIsLoaded_1(LoginTest.js:13)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63.call(LoginTest.js)\r\n\tat org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:23)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63._c_waitFor_2(LoginTest.js:22)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63.call(LoginTest.js)\r\n\tat org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:63)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63._c_script_0(LoginTest.js:17)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63.call(LoginTest.js)\r\n\tat org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:399)\r\n\tat org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3452)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63.call(LoginTest.js)\r\n\tat org.mozilla.javascript.gen.LoginTest_js_63.exec(LoginTest.js)\r\n\tat org.mozilla.javascript.Context.evaluateReader(Context.java:1275)\r\n\tat com.galenframework.javascript.GalenJsExecutor.eval(GalenJsExecutor.java:101)\r\n\tat com.galenframework.suite.actions.GalenPageActionRunJavascript.execute(GalenPageActionRunJavascript.java:65)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#colUserImagePreview\"}\n  (Session info: chrome=83.0.4103.97)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: 'unknown', revision: 'unknown', time: 'unknown'\nSystem info: host: 'LIN20001635', ip: '192.168.43.247', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\\Users\\syadav26\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:59157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: e445709f5e4394896515810672a44aab\n*** Element info: {Using=css selector, value=#colUserImagePreview}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.mozilla.javascript.MemberBox.invoke(MemberBox.java:126)\r\n\t... 26 more\r\n",
+          "type" : "node"
+        } ],
+        "time" : 1591781166360,
         "type" : "node"
       } ],
-      "time" : 1590484307173,
+      "time" : 1591781128437,
       "type" : "node"
     } ]
   }

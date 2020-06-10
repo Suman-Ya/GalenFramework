@@ -9,452 +9,281 @@
         <script type="text/javascript">
 var REPORT_DATA = {
   "testId" : "1-colt-header-on-desktop",
-  "name" : "Colt_header on desktop",
+  "name" : "Colt_header on Desktop",
   "report" : {
     "nodes" : [ {
-      "name" : "http://rfsag.colt.net/AGLogout  1920x1080",
+      "name" : "https://rfsidm.colt.net/nidp/app/login? 1920x1080",
       "status" : "info",
       "nodes" : [ {
-        "name" : "check Colt_header.gspec --include desktop",
+        "name" : "wait 10s",
+        "status" : "info",
+        "time" : 1591262810025,
+        "type" : "node"
+      }, {
+        "name" : "properties common.properties",
+        "status" : "info",
+        "time" : 1591262820027,
+        "type" : "node"
+      }, {
+        "name" : "properties TestData.properties",
+        "status" : "info",
+        "time" : 1591262820029,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_login.gspec --include desktop",
         "status" : "info",
         "nodes" : [ {
-          "name" : "Check layout: Colt_header.gspec included tags: desktop",
-          "status" : "error",
-          "time" : 1590487890111,
+          "name" : "Check layout: Colt_login.gspec included tags: desktop",
+          "status" : "info",
+          "time" : 1591262825030,
           "includedTags" : [ "desktop" ],
           "excludedTags" : [ ],
           "sections" : [ {
-            "name" : "Page Header",
+            "name" : "Login Module",
             "place" : {
-              "filePath" : "Colt_header.gspec",
-              "lineNumber" : 24
+              "filePath" : "Colt_login.gspec",
+              "lineNumber" : 19
             },
             "objects" : [ {
-              "name" : "header",
+              "name" : "username",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 26
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 21
                 },
-                "name" : "inside screen 0 to 1920px left right",
+                "name" : "left-of username_Img_icon ~-21 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "header",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "screen",
-                    "edge" : "left"
-                  },
-                  "expectedDistance" : "0 to 1920px",
-                  "realDistance" : "0px"
-                }, {
-                  "from" : {
-                    "object" : "header",
+                    "object" : "username",
                     "edge" : "right"
                   },
                   "to" : {
-                    "object" : "screen",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "0 to 1920px",
-                  "realDistance" : "1056px"
-                } ],
-                "highlight" : [ "header", "screen" ]
-              } ]
-            }, {
-              "name" : "header.logo",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 29
-                },
-                "name" : "inside header 64px left, 0 to 20px top bottom",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "header.logo",
+                    "object" : "username_Img_icon",
                     "edge" : "left"
                   },
-                  "to" : {
-                    "object" : "header",
-                    "edge" : "left"
-                  },
-                  "expectedDistance" : "64px",
-                  "realDistance" : "64px"
-                }, {
-                  "from" : {
-                    "object" : "header.logo",
-                    "edge" : "top"
-                  },
-                  "to" : {
-                    "object" : "header",
-                    "edge" : "top"
-                  },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "16px"
-                }, {
-                  "from" : {
-                    "object" : "header.logo",
-                    "edge" : "bottom"
-                  },
-                  "to" : {
-                    "object" : "header",
-                    "edge" : "bottom"
-                  },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "16px"
+                  "expectedDistance" : "-23 to -19px",
+                  "realDistance" : "-22px"
                 } ],
-                "highlight" : [ "header.logo", "header" ]
-              }, {
-                "status" : "error",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 30
-                },
-                "name" : "width 115 px",
-                "errors" : [ "\"header.logo\" width is 102px instead of 115px" ],
-                "meta" : [ {
-                  "from" : {
-                    "object" : "header.logo",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "header.logo",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "115px",
-                  "realDistance" : "102px"
-                } ],
-                "highlight" : [ "header.logo" ]
-              }, {
-                "status" : "error",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 31
-                },
-                "name" : "height 45.29 px",
-                "errors" : [ "\"header.logo\" height is 40.00px instead of 45.29px" ],
-                "meta" : [ {
-                  "from" : {
-                    "object" : "header.logo",
-                    "edge" : "top"
-                  },
-                  "to" : {
-                    "object" : "header.logo",
-                    "edge" : "bottom"
-                  },
-                  "expectedDistance" : "45.29px",
-                  "realDistance" : "40.00px"
-                } ],
-                "highlight" : [ "header.logo" ]
+                "highlight" : [ "username", "username_Img_icon" ]
               }, {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 32
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 22
                 },
-                "name" : "color-scheme 0% #20c997, < 90% #212529",
-                "highlight" : [ "header.logo" ]
-              } ]
-            } ]
-          }, {
-            "name" : "Right header Buttons Verification",
-            "place" : {
-              "filePath" : "Colt_header.gspec",
-              "lineNumber" : 34
-            },
-            "objects" : [ {
-              "name" : "header_2.Globe_icon",
-              "specs" : [ {
-                "status" : "error",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 36
-                },
-                "name" : "height 36 px",
-                "errors" : [ "\"header_2.Globe_icon\" height is 24px instead of 36px" ],
+                "name" : "above password ~24 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "header_2.Globe_icon",
-                    "edge" : "top"
-                  },
-                  "to" : {
-                    "object" : "header_2.Globe_icon",
+                    "object" : "username",
                     "edge" : "bottom"
                   },
-                  "expectedDistance" : "36px",
+                  "to" : {
+                    "object" : "password",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "22 to 26px",
                   "realDistance" : "24px"
                 } ],
-                "highlight" : [ "header_2.Globe_icon" ]
-              }, {
-                "status" : "error",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 37
-                },
-                "name" : "width 36 px",
-                "errors" : [ "\"header_2.Globe_icon\" width is 21px instead of 36px" ],
-                "meta" : [ {
-                  "from" : {
-                    "object" : "header_2.Globe_icon",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "header_2.Globe_icon",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "36px",
-                  "realDistance" : "21px"
-                } ],
-                "highlight" : [ "header_2.Globe_icon" ]
+                "highlight" : [ "username", "password" ]
               } ]
-            } ]
-          }, {
-            "name" : "Banner Verification",
-            "place" : {
-              "filePath" : "Colt_header.gspec",
-              "lineNumber" : 39
-            },
-            "objects" : [ {
-              "name" : "Banner_img",
+            }, {
+              "name" : "password",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 41
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 25
                 },
-                "name" : "below  header < 10px",
+                "name" : "left-of forgot_password ~-510 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "Banner_img",
+                    "object" : "password",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "forgot_password",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-512 to -508px",
+                  "realDistance" : "-511px"
+                } ],
+                "highlight" : [ "password", "forgot_password" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "below username ~24 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "password",
                     "edge" : "top"
                   },
                   "to" : {
-                    "object" : "header",
+                    "object" : "username",
                     "edge" : "bottom"
                   },
-                  "expectedDistance" : "< 10px",
-                  "realDistance" : "0px"
+                  "expectedDistance" : "22 to 26px",
+                  "realDistance" : "24px"
                 } ],
-                "highlight" : [ "Banner_img", "header" ]
+                "highlight" : [ "password", "username" ]
               } ]
             }, {
-              "name" : "Banner_text_img",
+              "name" : "username_Img_icon",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 43
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 32
                 },
-                "name" : "inside Banner_img 0 to 15px top left",
+                "name" : "height ~16px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "Banner_text_img",
+                    "object" : "username_Img_icon",
                     "edge" : "top"
                   },
                   "to" : {
-                    "object" : "Banner_img",
-                    "edge" : "top"
+                    "object" : "username_Img_icon",
+                    "edge" : "bottom"
                   },
-                  "expectedDistance" : "0 to 15px",
-                  "realDistance" : "0px"
-                }, {
-                  "from" : {
-                    "object" : "Banner_text_img",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "Banner_img",
-                    "edge" : "left"
-                  },
-                  "expectedDistance" : "0 to 15px",
-                  "realDistance" : "15px"
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
                 } ],
-                "highlight" : [ "Banner_text_img", "Banner_img" ]
+                "highlight" : [ "username_Img_icon" ]
               } ]
-            } ]
-          }, {
-            "name" : "Foot Verification",
-            "place" : {
-              "filePath" : "Colt_header.gspec",
-              "lineNumber" : 45
-            },
-            "objects" : [ {
-              "name" : "Foot_menu.copyright_txt",
+            }, {
+              "name" : "eyeIcon_password",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "height ~16px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "eyeIcon_password" ]
+              } ]
+            }, {
+              "name" : "login_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "below forgot_password  09 to 20 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "forgot_password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "9 to 20px",
+                  "realDistance" : "19px"
+                } ],
+                "highlight" : [ "login_btn", "forgot_password" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "text is \"Login\"",
+                "highlight" : [ "login_btn" ]
+              } ]
+            }, {
+              "name" : "register_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "text is \"Register\"",
+                "highlight" : [ "register_btn" ]
+              } ]
+            }, {
+              "name" : "login_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
                   "lineNumber" : 47
                 },
-                "name" : "text contains \"Copyright 2020\"",
-                "highlight" : [ "Foot_menu.copyright_txt" ]
-              } ]
-            }, {
-              "name" : "Foot_menu.codeofBusiness_link",
-              "specs" : [ {
+                "name" : "text is \"By logging in you agree to the Terms Of Use and to our Privacy and Cookie Policy. You may select to change your browser setting and restrict cookies.\"",
+                "highlight" : [ "login_txt" ]
+              }, {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 49
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 48
                 },
-                "name" : "near Foot_menu.GrpofCos_link -203 to 40px left",
+                "name" : "below register_btn 01 to 20 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "Foot_menu.codeofBusiness_link",
-                    "edge" : "right"
+                    "object" : "login_txt",
+                    "edge" : "top"
                   },
                   "to" : {
-                    "object" : "Foot_menu.GrpofCos_link",
-                    "edge" : "left"
+                    "object" : "register_btn",
+                    "edge" : "bottom"
                   },
-                  "expectedDistance" : "-203 to 40px",
-                  "realDistance" : "37px"
+                  "expectedDistance" : "1 to 20px",
+                  "realDistance" : "5px"
                 } ],
-                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.GrpofCos_link" ]
-              } ]
-            }, {
-              "name" : "Foot_menu.GrpofCos_link",
-              "specs" : [ {
-                "status" : "error",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 51
-                },
-                "name" : "near Foot_menu.DataPrivacyStatement_link -390 px right",
-                "errors" : [ "\"Foot_menu.GrpofCos_link\" is -323px right instead of -390px" ],
-                "meta" : [ {
-                  "from" : {
-                    "object" : "Foot_menu.GrpofCos_link",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "Foot_menu.DataPrivacyStatement_link",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "-390px",
-                  "realDistance" : "-323px"
-                } ],
-                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.DataPrivacyStatement_link" ]
-              } ]
-            }, {
-              "name" : "Foot_menu.DataPrivacyStatement_link",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 53
-                },
-                "name" : "near Foot_menu.TermsofUse_link -360 to 10px right",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "Foot_menu.DataPrivacyStatement_link",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "Foot_menu.TermsofUse_link",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "-360 to 10px",
-                  "realDistance" : "-253px"
-                } ],
-                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.TermsofUse_link" ]
-              } ]
-            }, {
-              "name" : "Foot_menu.TermsofUse_link",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 55
-                },
-                "name" : "near Foot_menu.HelpnSupport_link -360 to 10px right",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "Foot_menu.TermsofUse_link",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "Foot_menu.HelpnSupport_link",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "-360 to 10px",
-                  "realDistance" : "-219px"
-                } ],
-                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.HelpnSupport_link" ]
-              } ]
-            }, {
-              "name" : "Foot_menu.HelpnSupport_link",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_header.gspec",
-                  "lineNumber" : 57
-                },
-                "name" : "near Foot_menu.TermsofUse_link -360 to 10px left",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "Foot_menu.HelpnSupport_link",
-                    "edge" : "right"
-                  },
-                  "to" : {
-                    "object" : "Foot_menu.TermsofUse_link",
-                    "edge" : "left"
-                  },
-                  "expectedDistance" : "-360 to 10px",
-                  "realDistance" : "-219px"
-                } ],
-                "highlight" : [ "Foot_menu.HelpnSupport_link", "Foot_menu.TermsofUse_link" ]
+                "highlight" : [ "login_txt", "register_btn" ]
               } ]
             } ]
           } ],
           "objects" : {
-            "Foot_menu.TermsofUse_link" : {
-              "area" : [ 1015, 582, 79, 25 ]
+            "login_txt" : {
+              "area" : [ 376, 644, 511, 62 ]
             },
-            "header.logo" : {
-              "area" : [ 64, 19, 102, 40 ]
+            "password" : {
+              "area" : [ 376, 413, 511, 46 ]
             },
-            "Foot_menu.HelpnSupport_link" : {
-              "area" : [ 1131, 582, 103, 25 ]
+            "eyeIcon_password" : {
+              "area" : [ 861, 429, 16, 16 ]
             },
-            "Foot_menu.DataPrivacyStatement_link" : {
-              "area" : [ 841, 582, 136, 25 ]
+            "register_btn" : {
+              "area" : [ 376, 593, 511, 46 ]
             },
-            "Banner_text_img" : {
-              "area" : [ 15, 75, 1237, 152 ]
+            "username_Img_icon" : {
+              "area" : [ 865, 359, 11, 16 ]
             },
-            "Banner_img" : {
-              "area" : [ 0, 75, 1267, 192 ]
+            "login_btn" : {
+              "area" : [ 376, 523, 511, 46 ]
             },
-            "Foot_menu.GrpofCos_link" : {
-              "area" : [ 654, 582, 149, 25 ]
+            "username" : {
+              "area" : [ 376, 343, 511, 46 ]
             },
-            "header" : {
-              "area" : [ 0, 3, 211, 72 ]
-            },
-            "screen" : {
-              "area" : [ 0, 0, 1267, 652 ]
-            },
-            "Foot_menu.copyright_txt" : {
-              "area" : [ 31, 587, 133, 40 ]
-            },
-            "Foot_menu.codeofBusiness_link" : {
-              "area" : [ 436, 582, 181, 25 ]
-            },
-            "header_2.Globe_icon" : {
-              "area" : [ 1219, 24, 21, 24 ]
+            "forgot_password" : {
+              "area" : [ 376, 485, 171, 19 ]
             }
           },
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1590487883203,
+        "time" : 1591262820031,
         "type" : "node"
       } ],
-      "time" : 1590487877232,
+      "time" : 1591262799896,
       "type" : "node"
     } ]
   }

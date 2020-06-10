@@ -1,24 +1,44 @@
 {
   "testId" : "2-colt-logout-on-desktop",
-  "name" : "Colt_logout on desktop",
+  "name" : "Colt_logout on Desktop",
   "report" : {
     "nodes" : [ {
-      "name" : "http://rfsag.colt.net/AGLogout  1920x1080",
+      "name" : "http://rfsag.colt.net/AGLogout 1920x1080",
       "status" : "info",
       "nodes" : [ {
+        "name" : "wait 1m until gone \"#lockDown\"",
+        "status" : "info",
+        "time" : 1591770989513,
+        "type" : "node"
+      }, {
+        "name" : "wait 2m until visible \"xpath: //i[contains(@class,'fa fa-globe')]\"",
+        "status" : "info",
+        "time" : 1591770991523,
+        "type" : "node"
+      }, {
+        "name" : "properties common.properties",
+        "status" : "info",
+        "time" : 1591770992084,
+        "type" : "node"
+      }, {
+        "name" : "properties TestData.properties",
+        "status" : "info",
+        "time" : 1591770992085,
+        "type" : "node"
+      }, {
         "name" : "check Colt_logout.gspec --include desktop",
         "status" : "info",
         "nodes" : [ {
           "name" : "Check layout: Colt_logout.gspec included tags: desktop",
           "status" : "info",
-          "time" : 1590487900017,
+          "time" : 1591770994690,
           "includedTags" : [ "desktop" ],
           "excludedTags" : [ ],
           "sections" : [ {
             "name" : "Verification on logout page",
             "place" : {
               "filePath" : "Colt_logout.gspec",
-              "lineNumber" : 10
+              "lineNumber" : 31
             },
             "objects" : [ {
               "name" : "thankyou_txt",
@@ -26,7 +46,7 @@
                 "status" : "info",
                 "place" : {
                   "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 12
+                  "lineNumber" : 34
                 },
                 "name" : "inside Banner_img 0 to 15px top left",
                 "meta" : [ {
@@ -53,6 +73,14 @@
                   "realDistance" : "15px"
                 } ],
                 "highlight" : [ "thankyou_txt", "Banner_img" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "text is \"Thank you\"",
+                "highlight" : [ "thankyou_txt" ]
               } ]
             }, {
               "name" : "clock_icon",
@@ -60,7 +88,7 @@
                 "status" : "info",
                 "place" : {
                   "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 14
+                  "lineNumber" : 42
                 },
                 "name" : "above session_txt 10 to 20px",
                 "meta" : [ {
@@ -80,7 +108,7 @@
                 "status" : "info",
                 "place" : {
                   "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 15
+                  "lineNumber" : 43
                 },
                 "name" : "height 100px",
                 "meta" : [ {
@@ -98,28 +126,17 @@
                 "highlight" : [ "clock_icon" ]
               } ]
             }, {
-              "name" : "session_txt",
+              "name" : "login_btn",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
                   "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 17
-                },
-                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
-                "highlight" : [ "session_txt" ]
-              } ]
-            }, {
-              "name" : "loginbck_btn",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 19
+                  "lineNumber" : 45
                 },
                 "name" : "below session_txt 10 to 20px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "loginbck_btn",
+                    "object" : "login_btn",
                     "edge" : "top"
                   },
                   "to" : {
@@ -129,34 +146,82 @@
                   "expectedDistance" : "10 to 20px",
                   "realDistance" : "16px"
                 } ],
-                "highlight" : [ "loginbck_btn", "session_txt" ]
+                "highlight" : [ "login_btn", "session_txt" ]
               }, {
                 "status" : "info",
                 "place" : {
                   "filePath" : "Colt_logout.gspec",
-                  "lineNumber" : 20
+                  "lineNumber" : 46
                 },
                 "name" : "height 10 to 100px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "loginbck_btn",
+                    "object" : "login_btn",
                     "edge" : "top"
                   },
                   "to" : {
-                    "object" : "loginbck_btn",
+                    "object" : "login_btn",
                     "edge" : "bottom"
                   },
                   "expectedDistance" : "10 to 100px",
                   "realDistance" : "52px"
                 } ],
-                "highlight" : [ "loginbck_btn" ]
+                "highlight" : [ "login_btn" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "below session_txt 10 to 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "session_txt",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "login_btn", "session_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "height 10 to 100px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "login_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 100px",
+                  "realDistance" : "52px"
+                } ],
+                "highlight" : [ "login_btn" ]
+              } ]
+            }, {
+              "name" : "session_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
+                "highlight" : [ "session_txt" ]
               } ]
             } ]
           } ],
           "objects" : {
-            "loginbck_btn" : {
-              "area" : [ 425, 504, 415, 52 ]
-            },
             "Banner_img" : {
               "area" : [ 0, 75, 1267, 192 ]
             },
@@ -168,15 +233,18 @@
             },
             "thankyou_txt" : {
               "area" : [ 15, 75, 1237, 152 ]
+            },
+            "login_btn" : {
+              "area" : [ 425, 504, 415, 52 ]
             }
           },
           "screenshot" : "layout-2-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1590487896144,
+        "time" : 1591770992086,
         "type" : "node"
       } ],
-      "time" : 1590487891074,
+      "time" : 1591770984889,
       "type" : "node"
     } ]
   }

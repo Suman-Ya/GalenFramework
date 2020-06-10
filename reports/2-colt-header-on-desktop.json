@@ -1,0 +1,45 @@
+{
+  "testId" : "2-colt-header-on-desktop",
+  "name" : "Colt_header on Desktop",
+  "report" : {
+    "nodes" : [ {
+      "name" : "http://rfsag.colt.net/AGLogout 1920x1080",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 10s",
+        "status" : "info",
+        "time" : 1591714556337,
+        "type" : "node"
+      }, {
+        "name" : "wait 1m until gone \"#lockDown\"",
+        "status" : "info",
+        "time" : 1591714566337,
+        "type" : "node"
+      }, {
+        "name" : "properties common.properties",
+        "status" : "info",
+        "time" : 1591714566866,
+        "type" : "node"
+      }, {
+        "name" : "properties TestData.properties",
+        "status" : "info",
+        "time" : 1591714566869,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_header.gspec --include desktop",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "SyntaxException: JavaScript error inside statement\n    in Colt_header.gspec:33",
+          "status" : "error",
+          "time" : 1591714566925,
+          "stacktrace" : "com.galenframework.parser.SyntaxException: JavaScript error inside statement\n    in Colt_header.gspec:33\r\n\tat com.galenframework.speclang2.pagespec.PageSpecHandler.processExpressionsIn(PageSpecHandler.java:385)\r\n\tat com.galenframework.speclang2.pagespec.MacroProcessor.process(MacroProcessor.java:82)\r\n\tat com.galenframework.speclang2.pagespec.MacroProcessor.processNonMacroStatement(MacroProcessor.java:178)\r\n\tat com.galenframework.speclang2.pagespec.MacroProcessor.process(MacroProcessor.java:86)\r\n\tat com.galenframework.speclang2.pagespec.MacroProcessor.processNonMacroStatement(MacroProcessor.java:178)\r\n\tat com.galenframework.speclang2.pagespec.MacroProcessor.process(MacroProcessor.java:86)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:61)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:45)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:68)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:59)\r\n\tat com.galenframework.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:52)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\nCaused by: org.mozilla.javascript.EcmaError: ReferenceError: \"element\" is not defined. (<cmd>#1)\r\n\tat org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:4142)\r\n\tat org.mozilla.javascript.ScriptRuntime.constructError(ScriptRuntime.java:4120)\r\n\tat org.mozilla.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:4210)\r\n\tat org.mozilla.javascript.ScriptRuntime.name(ScriptRuntime.java:1886)\r\n\tat org.mozilla.javascript.gen._cmd__83._c_script_0(<cmd>:1)\r\n\tat org.mozilla.javascript.gen._cmd__83.call(<cmd>)\r\n\tat org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:399)\r\n\tat org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3452)\r\n\tat org.mozilla.javascript.gen._cmd__83.call(<cmd>)\r\n\tat org.mozilla.javascript.gen._cmd__83.exec(<cmd>)\r\n\tat org.mozilla.javascript.Context.evaluateString(Context.java:1244)\r\n\tat com.galenframework.javascript.GalenJsExecutor.evalStrictToString(GalenJsExecutor.java:126)\r\n\tat com.galenframework.parser.VarsParser.readJsExpression(VarsParser.java:119)\r\n\tat com.galenframework.parser.VarsParser.getExpressionValueString(VarsParser.java:102)\r\n\tat com.galenframework.parser.VarsParser.parse(VarsParser.java:71)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecHandler.processExpressionsIn(PageSpecHandler.java:383)\r\n\t... 19 more\r\n",
+          "type" : "node"
+        } ],
+        "time" : 1591714566870,
+        "type" : "node"
+      } ],
+      "time" : 1591714551892,
+      "type" : "node"
+    } ]
+  }
+}

@@ -3,7 +3,7 @@
         logo xpath //div[@class='col-2 colt-header']//img
 
     header_2 xpath //div[contains(@class,'localization')]    
-        TrackTickets_btn xpath //button[contains(text(),'Track Tickets')][1]
+        TrackTickets_btn xpath //button[contains(text(),"Track Tickets")][1]
         Globe_icon xpath //i[contains(@class,'fa fa-globe')]
     
     Banner_img xpath //div[@class='row banner-outline d-none d-sm-block']
@@ -24,17 +24,24 @@
 = Page Header =
     header:
         inside screen ${commonHeaderMargin} left right
+        height ${header.desktop.height} 
 
     header.logo:
-            inside header 64px left, 0 to 20px top bottom
-            width 115 px
-            height 45.29 px
-            color-scheme 0% #20c997, < 90% #212529
+        width 100 px
+        height 39.29 px
+        color-scheme ${headerlogo.desktop.color-scheme}
 
 = Right header Buttons Verification =
+    header_2.TrackTickets_btn:
+        height 36 px
+        width ${element.desktop.widthRange}
+        color-scheme ~12% #ffffff, < 90% #00A59B
+        text is ${header_2.TrackTickets_btn.text}
+
     header_2.Globe_icon:
         height 36 px
         width 36 px
+        color-scheme ${color-scheme_icon}
 
 = Banner Verification =
     Banner_img:
@@ -43,15 +50,56 @@
         inside Banner_img 0 to 15px top left
 
 = Foot Verification =
+    @on desktop
+        Foot_menu.copyright_txt:
+            text contains "Copyright 2020"
+        Foot_menu.codeofBusiness_link:
+            near Foot_menu.GrpofCos_link -203 to 40px left
+        Foot_menu.GrpofCos_link:
+            near Foot_menu.DataPrivacyStatement_link -300 to -382 px right
+        Foot_menu.DataPrivacyStatement_link:
+            near Foot_menu.TermsofUse_link -360 to 10px right
+        Foot_menu.TermsofUse_link:
+            near Foot_menu.HelpnSupport_link -360 to 10px right   
+        Foot_menu.HelpnSupport_link:
+            near Foot_menu.TermsofUse_link -360 to 10px left
+
+    @on Mobile, Tablet
+        Foot_menu.copyright_txt:
+            text contains ${Foot_menu.copyright_txt.text}
+        Foot_menu.codeofBusiness_link:
+            near Foot_menu.GrpofCos_link -203 to 40px left
+        Foot_menu.GrpofCos_link:
+            near Foot_menu.DataPrivacyStatement_link -150 to -250 px right
+        Foot_menu.DataPrivacyStatement_link:
+            near Foot_menu.TermsofUse_link -360 to 10px right
+        Foot_menu.TermsofUse_link:
+            near Foot_menu.HelpnSupport_link -360 to 10px right   
+        Foot_menu.HelpnSupport_link:
+            near Foot_menu.TermsofUse_link -360 to 10px left   
+
+= Overlapping Verification =
     Foot_menu.copyright_txt:
-        text contains "Copyright 2020"
+        height ${DeskElement.height}
+        width ${DeskElement.width}
+        left-of Foot_menu.codeofBusiness_link ${DeskElement.left}
     Foot_menu.codeofBusiness_link:
-        near Foot_menu.GrpofCos_link -203 to 40px left
+        height ${DeskElement.height}
+        width ${DeskElement.width}
+        left-of Foot_menu.GrpofCos_link ${DeskElement.left}
+        right-of Foot_menu.copyright_txt ${DeskElement.right}
     Foot_menu.GrpofCos_link:
-        near Foot_menu.DataPrivacyStatement_link -310 to -390 px right
+        height ${DeskElement.height}
+        width ${DeskElement.width}
+        left-of Foot_menu.DataPrivacyStatement_link ${DeskElement.left}
+        right-of Foot_menu.codeofBusiness_link ${DeskElement.right}
     Foot_menu.DataPrivacyStatement_link:
-        near Foot_menu.TermsofUse_link -360 to 10px right
+        height ${DeskElement.height}
+        width ${DeskElement.width}
+        left-of Foot_menu.TermsofUse_link ${DeskElement.left}
+        right-of Foot_menu.GrpofCos_link ${DeskElement.right}
     Foot_menu.TermsofUse_link:
-        near Foot_menu.HelpnSupport_link -360 to 10px right
-    Foot_menu.HelpnSupport_link:
-        near Foot_menu.TermsofUse_link -360 to 10px left
+        height ${DeskElement.height}
+        width ${DeskElement.width}
+        left-of Foot_menu.HelpnSupport_link ${DeskElement.left}
+        right-of Foot_menu.DataPrivacyStatement_link ${DeskElement.right}

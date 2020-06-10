@@ -1,0 +1,228 @@
+{
+  "testId" : "7-colt-login-on-tablet",
+  "name" : "Colt_login on Tablet",
+  "report" : {
+    "nodes" : [ {
+      "name" : "https://rfsidm.colt.net/nidp/app/login?  412x732",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 30s",
+        "status" : "info",
+        "time" : 1590590624226,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_login.gspec --include Tablet",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_login.gspec included tags: Tablet",
+          "status" : "info",
+          "time" : 1590590655564,
+          "includedTags" : [ "Tablet" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Login Module",
+            "place" : {
+              "filePath" : "Colt_login.gspec",
+              "lineNumber" : 19
+            },
+            "objects" : [ {
+              "name" : "username",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "left-of username_Img_icon ~-21 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "username",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "username_Img_icon",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-23 to -19px",
+                  "realDistance" : "-22px"
+                } ],
+                "highlight" : [ "username", "username_Img_icon" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "above password ~24 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "username",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "password",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "22 to 26px",
+                  "realDistance" : "24px"
+                } ],
+                "highlight" : [ "username", "password" ]
+              } ]
+            }, {
+              "name" : "username_Img_icon",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "height ~16px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "username_Img_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "username_Img_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "username_Img_icon" ]
+              } ]
+            }, {
+              "name" : "eyeIcon_password",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "height ~16px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "eyeIcon_password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "14 to 18px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "eyeIcon_password" ]
+              } ]
+            }, {
+              "name" : "login_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "below forgot-password  09 to 20 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "forgot-password",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "9 to 20px",
+                  "realDistance" : "19px"
+                } ],
+                "highlight" : [ "login_btn", "forgot-password" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "text is \"Login\"",
+                "highlight" : [ "login_btn" ]
+              } ]
+            }, {
+              "name" : "register_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "text is \"Register\"",
+                "highlight" : [ "register_btn" ]
+              } ]
+            }, {
+              "name" : "login_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "text is \"By logging in you agree to the Terms Of Use and to our Privacy and Cookie Policy. You may select to change your browser setting and restrict cookies.\"",
+                "highlight" : [ "login_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_login.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "below register_btn 01 to 20 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "login_txt",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "register_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "1 to 20px",
+                  "realDistance" : "13px"
+                } ],
+                "highlight" : [ "login_txt", "register_btn" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "login_txt" : {
+              "area" : [ 15, 465, 453, 62 ]
+            },
+            "password" : {
+              "area" : [ 15, 226, 453, 46 ]
+            },
+            "eyeIcon_password" : {
+              "area" : [ 442, 242, 16, 16 ]
+            },
+            "register_btn" : {
+              "area" : [ 15, 406, 453, 46 ]
+            },
+            "username_Img_icon" : {
+              "area" : [ 446, 172, 11, 16 ]
+            },
+            "login_btn" : {
+              "area" : [ 15, 336, 453, 46 ]
+            },
+            "forgot-password" : {
+              "area" : [ 15, 298, 171, 19 ]
+            },
+            "username" : {
+              "area" : [ 15, 156, 453, 46 ]
+            }
+          },
+          "screenshot" : "layout-7-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590590654226,
+        "type" : "node"
+      } ],
+      "time" : 1590590618457,
+      "type" : "node"
+    } ]
+  }
+}

@@ -1,20 +1,57 @@
 @objects
     thankyou_txt xpath //p[contains(@class,'centered text-white')]
+    thankyou_FR xpath //p[contains(text(), "Bienvenue dans Colt Online")]
     clock_icon xpath //img[@class='colt-clock']
     session_txt xpath //p[@class='forgot-password']
-    loginbck_btn xpath //button[@class='btn btn-secondary btn-block btn-lg']
+    login_btn xpath //button[@class='btn btn-secondary btn-block btn-lg']
+    loginbck_txt xpath //button[contains(text(),"Login Back To Colt Online")]
     tracktickets_btn xpath //button[@class='btn btn-primary']
     Banner_img xpath //div[@class='row banner-outline d-none d-sm-block']
     Globe_icon xpath //i[contains(@class,'fa fa-globe')]
+    menu_item-* xpath //div[@class='dropdown-menu dropdown-menu-right show']
+    FrenchLng #frLink
+    DeutschLng #deLink
+    ItalianoLng #itLink
+    PortgueseLng #ptLink
+    SpanishLng #esLink
+    JapaneseLng #jpLink
+    login_bnFR xpath //p[contains(text(),"Je vous remercie")]
+    
+@groups
+    Menu-items_text FrenchLng, DeutschLng, ItalianoLng, PortgueseLng, SpanishLng, JapaneseLng
+
+@script
+    data = ["Français", "Deutsch", "Italiano", "Português", "Español", "日本語"];
+            
+= Verification of Language menu =
+    @forEach [menu_item-*] as item, index as i
+        ${item}:
+            text is "${data[i-1]}"
 
 = Verification on logout page =
-    thankyou_txt:
-        inside Banner_img 0 to 15px top left
+    @if ${isVisible("loginbck_txt")}
+        thankyou_txt:
+            inside Banner_img 0 to 15px top left
+            text is ${Thankyou_EN.text}
+    @else ${isVisible("login_bnFR")}
+        thankyou_txt:
+            inside Banner_img 0 to 15px top left
+            text is ${Thankyou_FR.text}
+            
     clock_icon:
         above session_txt 10 to 20px
         height 100px
-    session_txt:
-        text contains "Your session has been terminated and will automatically redirected to"
-    loginbck_btn:
+    login_btn:
         below session_txt 10 to 20px
         height 10 to 100px
+    login_btn:
+        below session_txt 10 to 20px
+        height 10 to 100px
+    @if ${isVisible("loginbck_txt")}
+        session_txt:
+            text contains "Your session has been terminated and will automatically redirected to"
+    @else ${isVisible("login_bnFR")}
+        session_txt:
+            text contains "Votre session est terminée et sera automatiquement"
+    
+    

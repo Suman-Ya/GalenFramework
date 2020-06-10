@@ -1,0 +1,160 @@
+{
+  "testId" : "9-colt-logout-on-tablet",
+  "name" : "Colt_logout on Tablet",
+  "report" : {
+    "nodes" : [ {
+      "name" : "http://rfsag.colt.net/AGLogout 412x732",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 20s",
+        "status" : "info",
+        "time" : 1590576676148,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_logout.gspec --include Tablet",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_logout.gspec included tags: Tablet",
+          "status" : "error",
+          "time" : 1590576697071,
+          "includedTags" : [ "Tablet" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Verification on logout page",
+            "place" : {
+              "filePath" : "Colt_logout.gspec",
+              "lineNumber" : 10
+            },
+            "objects" : [ {
+              "name" : "thankyou_txt",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "errors" : [ "\"thankyou_txt\" is not visible on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "clock_icon",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "above session_txt 10 to 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "clock_icon",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "session_txt",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "10 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "clock_icon", "session_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "height 100px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "clock_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "clock_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "100px",
+                  "realDistance" : "100px"
+                } ],
+                "highlight" : [ "clock_icon" ]
+              } ]
+            }, {
+              "name" : "session_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
+                "highlight" : [ "session_txt" ]
+              } ]
+            }, {
+              "name" : "loginbck_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "below session_txt 10 to 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "session_txt",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "loginbck_btn", "session_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "height 10 to 100px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 100px",
+                  "realDistance" : "52px"
+                } ],
+                "highlight" : [ "loginbck_btn" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "loginbck_btn" : {
+              "area" : [ 63, 317, 357, 52 ]
+            },
+            "clock_icon" : {
+              "area" : [ 191, 109, 100, 100 ]
+            },
+            "session_txt" : {
+              "area" : [ 63, 225, 357, 76 ]
+            }
+          },
+          "screenshot" : "layout-9-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590576696149,
+        "type" : "node"
+      } ],
+      "time" : 1590576669901,
+      "type" : "node"
+    } ]
+  }
+}

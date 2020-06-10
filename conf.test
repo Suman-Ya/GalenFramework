@@ -1,11 +1,17 @@
-Colt_header on desktop
-    http://rfsag.colt.net/AGLogout  1920x1080
-        check Colt_header.gspec --include desktop
+@@table myBrowsers
+    | browser  |
+    | firefox  |
+    | chrome   |
+    | ie       |
+@@table myDevices
+    | deviceName| tags     | size      |
+    | Desktop   | desktop  | 1920x1080 |
 
-Colt_logout on desktop
-    http://rfsag.colt.net/AGLogout  1920x1080
-        check Colt_logout.gspec --include desktop
-
-Colt_login on desktop
-    https://rfsidm.colt.net/nidp/app/login?  1920x1080
-        check Colt_login.gspec --include desktop
+@@ parameterized using myDevices
+Colt_logout on ${deviceName}
+    https://rfsidm.colt.net/nidp/app/login? ${size}
+        wait 30s
+        properties common.properties
+        properties TestData.properties
+        check Colt_login.gspec --include ${tags}
+        run LoginTest.js '{login: "ColtAdmin", password: "Colt@1234"}'

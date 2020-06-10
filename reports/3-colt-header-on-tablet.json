@@ -1,0 +1,449 @@
+{
+  "testId" : "3-colt-header-on-tablet",
+  "name" : "Colt_header on Tablet",
+  "report" : {
+    "nodes" : [ {
+      "name" : "https://rfsidm.colt.net/nidp/app/login? 412x732",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 30s",
+        "status" : "info",
+        "time" : 1590590457332,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_header.gspec --include Tablet",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_header.gspec included tags: Tablet",
+          "status" : "error",
+          "time" : 1590590489385,
+          "includedTags" : [ "Tablet" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Page Header",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside screen 0 to 1920px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "402px"
+                } ],
+                "highlight" : [ "header", "screen" ]
+              } ]
+            }, {
+              "name" : "header.logo",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "width 100 px",
+                "errors" : [ "\"header.logo\" width is 97px instead of 100px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "100px",
+                  "realDistance" : "97px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "height 39.29 px",
+                "errors" : [ "\"header.logo\" height is 38.00px instead of 39.29px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "39.29px",
+                  "realDistance" : "38.00px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "color-scheme 0% #20c997, < 90% #212529",
+                "highlight" : [ "header.logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Right header Buttons Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 33
+            },
+            "objects" : [ {
+              "name" : "header_2.TrackTickets_btn",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "height 36 px",
+                "errors" : [ "\"header_2.TrackTickets_btn\" height is 38px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.TrackTickets_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header_2.TrackTickets_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "38px"
+                } ],
+                "highlight" : [ "header_2.TrackTickets_btn" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "width 143 px",
+                "errors" : [ "\"header_2.TrackTickets_btn\" width is 146px instead of 143px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.TrackTickets_btn",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header_2.TrackTickets_btn",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "143px",
+                  "realDistance" : "146px"
+                } ],
+                "highlight" : [ "header_2.TrackTickets_btn" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "color-scheme ~12% #ffffff, < 90% #00A59B",
+                "highlight" : [ "header_2.TrackTickets_btn" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "text is \"Track Tickets\"",
+                "highlight" : [ "header_2.TrackTickets_btn" ]
+              } ]
+            }, {
+              "name" : "header_2.Globe_icon",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "height 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" height is 24px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "24px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "width 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" width is 21px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "21px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "color-scheme 23% #fff, < 30% #212529",
+                "errors" : [ "color #fff on \"header_2.Globe_icon\" is 19% instead of 23%" ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Banner Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "Banner_img",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "below  header < 10px",
+                "errors" : [ "\"Banner_img\" is not visible on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "Banner_text_img",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "errors" : [ "\"Banner_text_img\" is not visible on page" ],
+                "highlight" : [ ]
+              } ]
+            } ]
+          }, {
+            "name" : "Foot Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 51
+            },
+            "objects" : [ {
+              "name" : "Foot_menu.copyright_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 68
+                },
+                "name" : "text contains \"Copyright 2020\"",
+                "highlight" : [ "Foot_menu.copyright_txt" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.codeofBusiness_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 70
+                },
+                "name" : "near Foot_menu.GrpofCos_link -203 to 40px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-203 to 40px",
+                  "realDistance" : "-203px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.GrpofCos_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.GrpofCos_link",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 72
+                },
+                "name" : "near Foot_menu.DataPrivacyStatement_link -150 to -250 px right",
+                "errors" : [ "\"Foot_menu.GrpofCos_link\" is -154px right which is not in range of -150 to -250px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-150 to -250px",
+                  "realDistance" : "-154px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.DataPrivacyStatement_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.DataPrivacyStatement_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-85px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.TermsofUse_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 76
+                },
+                "name" : "near Foot_menu.HelpnSupport_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-115px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.HelpnSupport_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.HelpnSupport_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 78
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-115px"
+                } ],
+                "highlight" : [ "Foot_menu.HelpnSupport_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "Foot_menu.TermsofUse_link" : {
+              "area" : [ 20, 753, 85, 16 ]
+            },
+            "header.logo" : {
+              "area" : [ 16, 16, 97, 38 ]
+            },
+            "Foot_menu.HelpnSupport_link" : {
+              "area" : [ 20, 782, 115, 16 ]
+            },
+            "Foot_menu.DataPrivacyStatement_link" : {
+              "area" : [ 20, 724, 154, 16 ]
+            },
+            "Foot_menu.GrpofCos_link" : {
+              "area" : [ 20, 695, 166, 16 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 81, 70 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 483, 830 ]
+            },
+            "Foot_menu.copyright_txt" : {
+              "area" : [ 20, 607, 443, 48 ]
+            },
+            "Foot_menu.codeofBusiness_link" : {
+              "area" : [ 20, 666, 203, 16 ]
+            },
+            "header_2.TrackTickets_btn" : {
+              "area" : [ 263, 16, 146, 38 ]
+            },
+            "header_2.Globe_icon" : {
+              "area" : [ 435, 21, 21, 24 ]
+            }
+          },
+          "screenshot" : "layout-3-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590590487333,
+        "type" : "node"
+      } ],
+      "time" : 1590590450497,
+      "type" : "node"
+    } ]
+  }
+}

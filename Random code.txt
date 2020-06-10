@@ -1,0 +1,36 @@
+if else condition :
+
+@if ${isVisible("FranceLng")}
+        &Menu-items_text:
+            aligned vertically all DeutschLng
+    @else ${isVisible("FranceLng")}
+        &Menu-items_text:
+            count visible &Menu-items_text is 5 to 6
+
+Colt@1234 
+
+
+@@ parameterized using myDevices
+Colt_header on ${deviceName}
+    https://rfsidm.colt.net/nidp/app/login? ${size}
+        wait 10s
+        wait 1m until gone "#lockDown"
+        properties common.properties
+        properties TestData.properties
+        check Colt_header.gspec --include ${tags}
+
+removing some elements
+
+$("#userId").remove();
+
+----
+
+@@ parameterized using myDevices
+Colt_logout on ${deviceName}
+    http://rfsag.colt.net/AGLogout ${size}
+        wait 1m until gone "#lockDown"
+        run ChangeLanguageTest.js
+        wait 2m until visible "xpath: //i[contains(@class,'fa fa-globe')]"
+        properties common.properties
+        properties TestData.properties
+        check Colt_logout.gspec --include ${tags}

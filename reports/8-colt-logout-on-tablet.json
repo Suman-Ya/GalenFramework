@@ -1,0 +1,102 @@
+{
+  "testId" : "8-colt-logout-on-tablet",
+  "name" : "Colt_logout on Tablet",
+  "report" : {
+    "nodes" : [ {
+      "name" : "http://rfsag.colt.net/AGLogout  640x480",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check Colt_logout.gspec --include tablet",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_logout.gspec included tags: tablet",
+          "status" : "error",
+          "time" : 1590502069090,
+          "includedTags" : [ "tablet" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Verification on logout page",
+            "place" : {
+              "filePath" : "Colt_logout.gspec",
+              "lineNumber" : 10
+            },
+            "objects" : [ {
+              "name" : "thankyou_txt",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "errors" : [ "\"thankyou_txt\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "clock_icon",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "above session_txt 10 to 20px",
+                "errors" : [ "\"clock_icon\" is absent on page" ],
+                "highlight" : [ ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "height 100px",
+                "errors" : [ "\"clock_icon\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "session_txt",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
+                "errors" : [ "\"session_txt\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "loginbck_btn",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "below session_txt 10 to 20px",
+                "errors" : [ "\"loginbck_btn\" is absent on page" ],
+                "highlight" : [ ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "height 10 to 100px",
+                "errors" : [ "\"loginbck_btn\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            } ]
+          } ],
+          "objects" : { },
+          "screenshot" : "layout-8-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590502068542,
+        "type" : "node"
+      } ],
+      "time" : 1590502064108,
+      "type" : "node"
+    } ]
+  }
+}

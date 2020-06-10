@@ -1,0 +1,188 @@
+{
+  "testId" : "7-colt-logout-on-desktop",
+  "name" : "Colt_logout on Desktop",
+  "report" : {
+    "nodes" : [ {
+      "name" : "http://rfsag.colt.net/AGLogout 1920x1080",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 20s",
+        "status" : "info",
+        "time" : 1590576617020,
+        "type" : "node"
+      }, {
+        "name" : "check Colt_logout.gspec --include desktop",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: Colt_logout.gspec included tags: desktop",
+          "status" : "info",
+          "time" : 1590576638594,
+          "includedTags" : [ "desktop" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Verification on logout page",
+            "place" : {
+              "filePath" : "Colt_logout.gspec",
+              "lineNumber" : 10
+            },
+            "objects" : [ {
+              "name" : "thankyou_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "thankyou_txt",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "thankyou_txt",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "thankyou_txt", "Banner_img" ]
+              } ]
+            }, {
+              "name" : "clock_icon",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "above session_txt 10 to 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "clock_icon",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "session_txt",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "10 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "clock_icon", "session_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "height 100px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "clock_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "clock_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "100px",
+                  "realDistance" : "100px"
+                } ],
+                "highlight" : [ "clock_icon" ]
+              } ]
+            }, {
+              "name" : "session_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "text contains \"Your session has been terminated and will automatically redirected to\"",
+                "highlight" : [ "session_txt" ]
+              } ]
+            }, {
+              "name" : "loginbck_btn",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "below session_txt 10 to 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "session_txt",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 20px",
+                  "realDistance" : "16px"
+                } ],
+                "highlight" : [ "loginbck_btn", "session_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_logout.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "height 10 to 100px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "loginbck_btn",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "10 to 100px",
+                  "realDistance" : "52px"
+                } ],
+                "highlight" : [ "loginbck_btn" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "loginbck_btn" : {
+              "area" : [ 425, 504, 415, 52 ]
+            },
+            "Banner_img" : {
+              "area" : [ 0, 75, 1267, 192 ]
+            },
+            "clock_icon" : {
+              "area" : [ 583, 296, 100, 100 ]
+            },
+            "session_txt" : {
+              "area" : [ 425, 412, 415, 76 ]
+            },
+            "thankyou_txt" : {
+              "area" : [ 15, 75, 1237, 152 ]
+            }
+          },
+          "screenshot" : "layout-7-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1590576637020,
+        "type" : "node"
+      } ],
+      "time" : 1590576608836,
+      "type" : "node"
+    } ]
+  }
+}

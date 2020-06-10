@@ -1,29 +1,42 @@
 @objects
-    username    #userId
-    password    #password
-    forgot-password    xpath  //a[contains(text(),'I forgot my password')]
+    username #userId
+    password #password
+    forgot_password xpath //*[@id="IDPLogin"]/p/a
     username_Img_icon xpath //i[@class='fa fa-user']
     eyeIcon_password xpath //i[@class='fa fa-eye-slash']
     login_btn xpath //button[contains(text(),'Login')]
     register_btn xpath //button[contains(text(),'Register')]
     login_txt xpath //div[@class='row terms']//p[1]
-   
+    language_tik xpath //a[contains(@class, 'btn dropdown-item dropdown-item-checked')]
+    menu_item-*  xpath //div[@class='dropdown-menu dropdown-menu-right show']
+    FranceLng #frLink
+    DeutschLng #deLink
+    ItalianoLng #itLink
+    PortgueseLng #ptLink
+    SpanishLng #esLink
+    JapaneseLng #jpLink
+    login_bnFR xpath //p[contains(text(), 'Je vous remercie')]
+    FR_ForgotPass xpath //a[contains(text(),"J'ai oublié mon mot de passe")]
+    FR_welcome_txt xpath //p[contains(text(),"Bienvenue dans Colt Online")]
+    EN_welcome_txt xpath //p[contains(text(),"Welcome to Colt Online")]
 
 @groups
-    Login_Objects   username, password, login_btn, register_btn
-
-@set
-    commonHeaderMargin    100 to 380px 
-    contentMargin  ~20px     
+    Menu-items_text FranceLng, DeutschLng, ItalianoLng, PortgueseLng, SpanishLng, JapaneseLng
+    
+@script
+    data = ["Français", "Deutsch", "Italiano", "Português", "Español", "日本語"];
 
 = Login Module =
     username:
         left-of username_Img_icon ~-21 px
         above password ~24 px
-
-    password:
-        left-of forgot-password ~-510 px 
-        below username  ~24 px
+    @on desktop
+        password:
+            left-of forgot_password ~-510 px 
+            below username ~24 px
+    @on Mobile
+        password:
+            below username ~24 px
 
     username_Img_icon:
         height ~16px
@@ -32,20 +45,40 @@
         height ~16px
 
     login_btn:
-        below forgot-password  09 to 20 px
+        below forgot_password  09 to 20 px
 
-    login_btn:
-        text is "Login"
+= Verification of page elements when country changes =
+    @if ${isVisible("FR_ForgotPass")}
+        login_btn:
+            text is ${French_login_btn.text}
+    @else
+        login_btn:
+            text is ${English_login_btn.text}
+    
+    @if ${isVisible("FR_ForgotPass")}
+        register_btn:
+            text is ${French_register_btn.text}
+    @else
+        register_btn:
+            text is ${English_register_btn.text}
+    
+    @if ${isVisible("FR_ForgotPass")}
+        login_txt:
+            text is ${French_login.text}
+            below register_btn 01 to 20 px
+    @else
+        login_txt:
+            text is ${English_login.text}
+            below register_btn 01 to 20 px
 
-    register_btn:
-        text is "Register"
-
-    login_txt:
-        text is "By logging in you agree to the Terms Of Use and to our Privacy and Cookie Policy. You may select to change your browser setting and restrict cookies."
-        below register_btn 01 to 20 px
-
-= Login Fields Verification =
-    &Login_Objects:
-        inside screen ${commonHeaderMargin} left right 
-
-
+    @if ${isVisible("FR_ForgotPass")}
+        FR_welcome_txt:
+            text is ${French_welcome.text}
+    @else 
+        EN_welcome_txt:
+            text is ${English_welcome.text}
+            
+= Verification of Language menu =
+    @forEach [menu_item-*] as item, index as i
+        ${item}:
+            text is "${data[i-1]}"

@@ -9,25 +9,900 @@
         <script type="text/javascript">
 var REPORT_DATA = {
   "testId" : "3-colt-header-on-desktop",
-  "name" : "Colt_header on desktop",
+  "name" : "Colt_header on Desktop",
   "report" : {
     "nodes" : [ {
-      "name" : "http://rfsag.colt.net/AGLogout  1920x1080",
+      "name" : "http://rfsag.colt.net/AGLogout 1920x1080",
       "status" : "info",
       "nodes" : [ {
+        "name" : "wait 10s",
+        "status" : "info",
+        "time" : 1591771000437,
+        "type" : "node"
+      }, {
+        "name" : "wait 1m until gone \"#lockDown\"",
+        "status" : "info",
+        "time" : 1591771010438,
+        "type" : "node"
+      }, {
+        "name" : "properties common.properties",
+        "status" : "info",
+        "time" : 1591771010964,
+        "type" : "node"
+      }, {
+        "name" : "properties TestData.properties",
+        "status" : "info",
+        "time" : 1591771010966,
+        "type" : "node"
+      }, {
         "name" : "check Colt_header.gspec --include desktop",
         "status" : "info",
         "nodes" : [ {
-          "name" : "SyntaxException: Expecting \"px\", \"to\" or \"%\", got \"right\"\n    in Colt_header.gspec:60",
+          "name" : "Check layout: Colt_header.gspec included tags: desktop",
           "status" : "error",
-          "time" : 1590484333666,
-          "stacktrace" : "com.galenframework.parser.SyntaxException: Expecting \"px\", \"to\" or \"%\", got \"right\"\n    in Colt_header.gspec:60\r\n\tat com.galenframework.parser.ExpectRange.read(ExpectRange.java:64)\r\n\tat com.galenframework.parser.ExpectRange.read(ExpectRange.java:25)\r\n\tat com.galenframework.parser.ExpectLocations.read(ExpectLocations.java:34)\r\n\tat com.galenframework.parser.ExpectLocations.read(ExpectLocations.java:27)\r\n\tat com.galenframework.speclang2.specs.SpecNearProcessor.process(SpecNearProcessor.java:37)\r\n\tat com.galenframework.speclang2.specs.SpecReader.read(SpecReader.java:116)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSpec(PageSectionProcessor.java:220)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processObject(PageSectionProcessor.java:191)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSection(PageSectionProcessor.java:75)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.process(PageSectionProcessor.java:63)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.processNode(PostProcessor.java:39)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.process(PostProcessor.java:33)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:62)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:45)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:68)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:59)\r\n\tat com.galenframework.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:52)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n",
-          "type" : "node"
+          "time" : 1591771014987,
+          "includedTags" : [ "desktop" ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Page Header",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside screen 0 to 1920px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0 to 1920px",
+                  "realDistance" : "1056px"
+                } ],
+                "highlight" : [ "header", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "height 70 to 90px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "70 to 90px",
+                  "realDistance" : "72px"
+                } ],
+                "highlight" : [ "header" ]
+              } ]
+            }, {
+              "name" : "header.logo",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "width 100 px",
+                "errors" : [ "\"header.logo\" width is 102px instead of 100px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "100px",
+                  "realDistance" : "102px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "height 39.29 px",
+                "errors" : [ "\"header.logo\" height is 40.00px instead of 39.29px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header.logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header.logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "39.29px",
+                  "realDistance" : "40.00px"
+                } ],
+                "highlight" : [ "header.logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "color-scheme 0% #20c997, < 90% #212529",
+                "highlight" : [ "header.logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Right header Buttons Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 34
+            },
+            "objects" : [ {
+              "name" : "header_2.TrackTickets_btn",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "height 36 px",
+                "errors" : [ "\"header_2.TrackTickets_btn\" is absent on page" ],
+                "highlight" : [ ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "width widthRange ~130 to 190px",
+                "errors" : [ "\"header_2.TrackTickets_btn\" is absent on page" ],
+                "highlight" : [ ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "color-scheme ~12% #ffffff, < 90% #00A59B",
+                "errors" : [ "\"header_2.TrackTickets_btn\" is absent on page" ],
+                "highlight" : [ ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "text is \"Track Tickets\"",
+                "errors" : [ "\"header_2.TrackTickets_btn\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "header_2.Globe_icon",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "height 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" height is 24px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "24px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "width 36 px",
+                "errors" : [ "\"header_2.Globe_icon\" width is 21px instead of 36px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "header_2.Globe_icon",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "36px",
+                  "realDistance" : "21px"
+                } ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              }, {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "color-scheme 0% #fff, < 30% #212529",
+                "errors" : [ "color #fff on \"header_2.Globe_icon\" is 23% instead of 0%" ],
+                "highlight" : [ "header_2.Globe_icon" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Banner Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 46
+            },
+            "objects" : [ {
+              "name" : "Banner_img",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "below  header < 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Banner_img",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "header",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "< 10px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "Banner_img", "header" ]
+              } ]
+            }, {
+              "name" : "Banner_text_img",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "inside Banner_img 0 to 15px top left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Banner_text_img",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "Banner_text_img",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Banner_img",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "Banner_text_img", "Banner_img" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Foot Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 52
+            },
+            "objects" : [ {
+              "name" : "Foot_menu.copyright_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "text contains \"Copyright 2020\"",
+                "highlight" : [ "Foot_menu.copyright_txt" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.codeofBusiness_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 57
+                },
+                "name" : "near Foot_menu.GrpofCos_link -203 to 40px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-203 to 40px",
+                  "realDistance" : "38px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.GrpofCos_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.GrpofCos_link",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 59
+                },
+                "name" : "near Foot_menu.DataPrivacyStatement_link -300 to -382 px right",
+                "errors" : [ "\"Foot_menu.GrpofCos_link\" is -390px right which is not in range of -300 to -382px" ],
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-300 to -382px",
+                  "realDistance" : "-390px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.DataPrivacyStatement_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.DataPrivacyStatement_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 61
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-304px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.TermsofUse_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 63
+                },
+                "name" : "near Foot_menu.HelpnSupport_link -360 to 10px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-262px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.HelpnSupport_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.HelpnSupport_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "near Foot_menu.TermsofUse_link -360 to 10px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "-360 to 10px",
+                  "realDistance" : "-262px"
+                } ],
+                "highlight" : [ "Foot_menu.HelpnSupport_link", "Foot_menu.TermsofUse_link" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Overlapping Verification",
+            "place" : {
+              "filePath" : "Colt_header.gspec",
+              "lineNumber" : 81
+            },
+            "objects" : [ {
+              "name" : "Foot_menu.copyright_txt",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 83
+                },
+                "name" : "height 25 to 50 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25 to 50px",
+                  "realDistance" : "41px"
+                } ],
+                "highlight" : [ "Foot_menu.copyright_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 84
+                },
+                "name" : "width 90 to 250 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "90 to 250px",
+                  "realDistance" : "157px"
+                } ],
+                "highlight" : [ "Foot_menu.copyright_txt" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 85
+                },
+                "name" : "left-of Foot_menu.codeofBusiness_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "Foot_menu.copyright_txt", "Foot_menu.codeofBusiness_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.codeofBusiness_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "height 25 to 50 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25 to 50px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 88
+                },
+                "name" : "width 90 to 250 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "90 to 250px",
+                  "realDistance" : "223px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 89
+                },
+                "name" : "left-of Foot_menu.GrpofCos_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "38px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.GrpofCos_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 90
+                },
+                "name" : "right-of Foot_menu.copyright_txt 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.copyright_txt",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "Foot_menu.codeofBusiness_link", "Foot_menu.copyright_txt" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.GrpofCos_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 92
+                },
+                "name" : "height 25 to 50 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25 to 50px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 93
+                },
+                "name" : "width 90 to 250 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "90 to 250px",
+                  "realDistance" : "183px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 94
+                },
+                "name" : "left-of Foot_menu.DataPrivacyStatement_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "37px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.DataPrivacyStatement_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 95
+                },
+                "name" : "right-of Foot_menu.codeofBusiness_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.codeofBusiness_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "38px"
+                } ],
+                "highlight" : [ "Foot_menu.GrpofCos_link", "Foot_menu.codeofBusiness_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.DataPrivacyStatement_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 97
+                },
+                "name" : "height 25 to 50 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25 to 50px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 98
+                },
+                "name" : "width 90 to 250 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "90 to 250px",
+                  "realDistance" : "170px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 99
+                },
+                "name" : "left-of Foot_menu.TermsofUse_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "39px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.TermsofUse_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 100
+                },
+                "name" : "right-of Foot_menu.GrpofCos_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.GrpofCos_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "37px"
+                } ],
+                "highlight" : [ "Foot_menu.DataPrivacyStatement_link", "Foot_menu.GrpofCos_link" ]
+              } ]
+            }, {
+              "name" : "Foot_menu.TermsofUse_link",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 102
+                },
+                "name" : "height 25 to 50 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25 to 50px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 103
+                },
+                "name" : "width 90 to 250 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "90 to 250px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 104
+                },
+                "name" : "left-of Foot_menu.HelpnSupport_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.HelpnSupport_link",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "38px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.HelpnSupport_link" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "Colt_header.gspec",
+                  "lineNumber" : 105
+                },
+                "name" : "right-of Foot_menu.DataPrivacyStatement_link 30 to 100 px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "Foot_menu.TermsofUse_link",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "Foot_menu.DataPrivacyStatement_link",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "30 to 100px",
+                  "realDistance" : "39px"
+                } ],
+                "highlight" : [ "Foot_menu.TermsofUse_link", "Foot_menu.DataPrivacyStatement_link" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "Foot_menu.TermsofUse_link" : {
+              "area" : [ 973, 606, 95, 25 ]
+            },
+            "header.logo" : {
+              "area" : [ 64, 19, 102, 40 ]
+            },
+            "Foot_menu.HelpnSupport_link" : {
+              "area" : [ 1106, 606, 129, 25 ]
+            },
+            "Foot_menu.DataPrivacyStatement_link" : {
+              "area" : [ 764, 606, 170, 25 ]
+            },
+            "Banner_text_img" : {
+              "area" : [ 15, 75, 1237, 152 ]
+            },
+            "Banner_img" : {
+              "area" : [ 0, 75, 1267, 192 ]
+            },
+            "Foot_menu.GrpofCos_link" : {
+              "area" : [ 544, 606, 183, 25 ]
+            },
+            "header" : {
+              "area" : [ 0, 3, 211, 72 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 1267, 676 ]
+            },
+            "Foot_menu.copyright_txt" : {
+              "area" : [ 31, 610, 157, 41 ]
+            },
+            "Foot_menu.codeofBusiness_link" : {
+              "area" : [ 283, 606, 223, 25 ]
+            },
+            "header_2.Globe_icon" : {
+              "area" : [ 1219, 24, 21, 24 ]
+            }
+          },
+          "screenshot" : "layout-3-screenshot.png",
+          "type" : "layout"
         } ],
-        "time" : 1590484333594,
+        "time" : 1591771010968,
         "type" : "node"
       } ],
-      "time" : 1590484329806,
+      "time" : 1591770995836,
       "type" : "node"
     } ]
   }
